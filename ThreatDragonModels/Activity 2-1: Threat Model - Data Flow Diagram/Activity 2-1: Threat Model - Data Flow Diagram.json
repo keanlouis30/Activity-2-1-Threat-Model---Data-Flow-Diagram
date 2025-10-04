@@ -622,159 +622,6 @@
             }
           },
           {
-            "position": {
-              "x": 960,
-              "y": 230
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "LDAP"
-              },
-              "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "edb197ee-6238-4893-a9bc-e5d1e954615b"
-                },
-                {
-                  "group": "right",
-                  "id": "02121ce6-6aea-498a-88d1-1762ed6bd183"
-                },
-                {
-                  "group": "bottom",
-                  "id": "0a50aa0c-977b-4ee8-9e7c-b6a225226669"
-                },
-                {
-                  "group": "left",
-                  "id": "51205ad8-dbed-40b6-a46e-6c088d408c54"
-                }
-              ]
-            },
-            "id": "9c6f9e1e-1ac3-4b0f-90e3-6954a1efc500",
-            "zIndex": 5,
-            "data": {
-              "type": "tm.Store",
-              "name": "LDAP",
-              "description": "Stores user credentials and roles",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
-              "threats": [
-                {
-                  "id": "854b4e6d-4784-4648-a7f9-9a71002f246c",
-                  "title": "LDAP Data Manipulation",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Repudiation",
-                  "description": "If LDAP changes aren’t logged, it becomes impossible to trace who modified user roles or permissions.",
-                  "mitigation": "Enable LDAP logging and audit trails; restrict modification privileges.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 9,
-                  "score": ""
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "repudiation": 1,
-                "informationDisclosure": 0,
-                "denialOfService": 0
-              }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
-            }
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -826,57 +673,6 @@
               {
                 "x": 670,
                 "y": 190
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Verified",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Verified"
-            ],
-            "id": "086c052a-5aa6-4b42-9028-6bf67fe9789c",
-            "source": {
-              "cell": "9c6f9e1e-1ac3-4b0f-90e3-6954a1efc500",
-              "port": "0a50aa0c-977b-4ee8-9e7c-b6a225226669"
-            },
-            "target": {
-              "cell": "b0664dcc-fe01-497d-8617-475feaebe5f7",
-              "port": "bbd55100-add6-4efa-b8cc-b7b048a49a27"
-            },
-            "vertices": [
-              {
-                "x": 790,
-                "y": 470
               }
             ]
           },
@@ -1146,6 +942,54 @@
             ]
           },
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internal Application Network Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Internal Application Network Trust Boundary"
+            ],
+            "id": "78473aee-41c6-4dbc-8d0c-166169606a2c",
+            "source": {
+              "x": 490,
+              "y": 40
+            },
+            "target": {
+              "x": 620,
+              "y": 50
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 80
+              },
+              {
+                "x": 510,
+                "y": 480
+              },
+              {
+                "x": 680,
+                "y": 550
+              },
+              {
+                "x": 760,
+                "y": 450
+              },
+              {
+                "x": 730,
+                "y": 220
+              }
+            ]
+          },
+          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1180,73 +1024,185 @@
             "labels": [
               "Verifies the privilege"
             ],
-            "id": "e0f027b7-406a-46f1-ba26-bab25a47f749",
+            "id": "717fe07b-0c12-4add-b028-45e365928932",
             "source": {
-              "cell": "b0664dcc-fe01-497d-8617-475feaebe5f7",
-              "port": "f963c098-d047-4405-a18e-334a55d530fa"
+              "x": 720,
+              "y": 410
             },
             "target": {
-              "cell": "9c6f9e1e-1ac3-4b0f-90e3-6954a1efc500",
+              "cell": "c02cd591-7336-4d7f-a626-2dc822884540",
               "port": "51205ad8-dbed-40b6-a46e-6c088d408c54"
             },
-            "vertices": [
-              {
-                "x": 820,
-                "y": 390
-              }
-            ]
+            "vertices": []
           },
           {
-            "shape": "trust-boundary-curve",
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
             "width": 200,
             "height": 100,
             "zIndex": 10,
             "connector": "smooth",
             "data": {
-              "type": "tm.Boundary",
-              "name": "Internal Application Network Trust Boundary",
+              "type": "tm.Flow",
+              "name": "Data Flow",
               "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
             },
             "labels": [
-              "Internal Application Network Trust Boundary"
+              "Data Flow"
             ],
-            "id": "78473aee-41c6-4dbc-8d0c-166169606a2c",
+            "id": "604f8691-2072-42a7-a756-9c898406b5ed",
             "source": {
-              "x": 660,
-              "y": 30
+              "x": 939,
+              "y": 320
             },
             "target": {
-              "x": 660,
-              "y": 30
+              "x": 1039,
+              "y": 420
+            }
+          },
+          {
+            "position": {
+              "x": 890,
+              "y": 260
             },
-            "vertices": [
-              {
-                "x": 470,
-                "y": 100
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "LDAP"
               },
-              {
-                "x": 540,
-                "y": 460
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               },
-              {
-                "x": 700,
-                "y": 540
-              },
-              {
-                "x": 950,
-                "y": 490
-              },
-              {
-                "x": 1170,
-                "y": 310
-              },
-              {
-                "x": 1150,
-                "y": 50
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
-            ]
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "edb197ee-6238-4893-a9bc-e5d1e954615b"
+                },
+                {
+                  "group": "right",
+                  "id": "02121ce6-6aea-498a-88d1-1762ed6bd183"
+                },
+                {
+                  "group": "bottom",
+                  "id": "0a50aa0c-977b-4ee8-9e7c-b6a225226669"
+                },
+                {
+                  "group": "left",
+                  "id": "51205ad8-dbed-40b6-a46e-6c088d408c54"
+                }
+              ]
+            },
+            "id": "c02cd591-7336-4d7f-a626-2dc822884540",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "LDAP",
+              "description": "Stores user credentials and roles",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
           }
         ]
       }
