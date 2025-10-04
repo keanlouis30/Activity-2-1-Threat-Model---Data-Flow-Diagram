@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "034a74be-c046-48b6-abc6-ba7c969ef48d",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Browser Client",
@@ -173,6 +173,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -256,7 +257,6 @@
               ]
             },
             "id": "9bcd54a0-c903-41e9-9716-e4fc15886c9f",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web Application",
@@ -333,6 +333,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -416,7 +417,6 @@
               ]
             },
             "id": "9b1a5d37-8ed1-433b-8f62-c43a038ff95f",
-            "zIndex": 3,
             "data": {
               "type": "tm.Store",
               "name": "SQL Database",
@@ -487,6 +487,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -570,7 +571,6 @@
               ]
             },
             "id": "b0664dcc-fe01-497d-8617-475feaebe5f7",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Authorization Provider",
@@ -619,13 +619,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1061,13 +1054,13 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "Internal Application Network Trust Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             },
             "labels": [
-              "Trust Boundary"
+              "Internal Application Network Trust Boundary"
             ],
             "id": "6c45c064-618a-41ea-b65d-4253ce5e5601",
             "source": {
@@ -1084,12 +1077,20 @@
                 "y": 140
               },
               {
-                "x": 980,
-                "y": 170
+                "x": 730,
+                "y": 110
               },
               {
-                "x": 1070,
-                "y": 170
+                "x": 770,
+                "y": 110
+              },
+              {
+                "x": 880,
+                "y": 140
+              },
+              {
+                "x": 970,
+                "y": 140
               },
               {
                 "x": 1210,
@@ -1099,7 +1100,17 @@
                 "x": 980,
                 "y": 620
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -1115,16 +1126,19 @@
                 "text": "LDAP"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1208,7 +1222,6 @@
               ]
             },
             "id": "c02cd591-7336-4d7f-a626-2dc822884540",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "LDAP",
@@ -1216,13 +1229,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "91dba5c4-f33b-4b46-be4b-0bc547dab76c",
+                  "title": "LDAP Data Manipulation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "If LDAP changes aren’t logged, it becomes impossible to trace who modified user roles or permissions.",
+                  "mitigation": "Enable LDAP logging and audit trails; restrict modification privileges.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             }
           }
         ]
@@ -1230,6 +1263,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 10
+    "threatTop": 11
   }
 }
