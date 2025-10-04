@@ -619,6 +619,13 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -942,42 +949,6 @@
             ]
           },
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Internal Application Network Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              "Internal Application Network Trust Boundary"
-            ],
-            "id": "78473aee-41c6-4dbc-8d0c-166169606a2c",
-            "source": {
-              "x": 480,
-              "y": 500
-            },
-            "target": {
-              "x": 760,
-              "y": 350
-            },
-            "vertices": [
-              {
-                "x": 680,
-                "y": 550
-              },
-              {
-                "x": 760,
-                "y": 450
-              }
-            ]
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1081,6 +1052,54 @@
               "port": "51205ad8-dbed-40b6-a46e-6c088d408c54"
             },
             "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "6c45c064-618a-41ea-b65d-4253ce5e5601",
+            "source": {
+              "x": 470,
+              "y": 650
+            },
+            "target": {
+              "x": 470,
+              "y": 650
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": 140
+              },
+              {
+                "x": 980,
+                "y": 170
+              },
+              {
+                "x": 1070,
+                "y": 170
+              },
+              {
+                "x": 1210,
+                "y": 210
+              },
+              {
+                "x": 980,
+                "y": 620
+              }
+            ]
           },
           {
             "position": {
